@@ -6,12 +6,6 @@ const app = express();
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Hello World'
-    });
-});
-
 app.use((req, res) => {
     res.status(404).end();
 });
